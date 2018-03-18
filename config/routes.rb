@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+   get '/nowy_user', to: 'users#new'
+
    root 'podaj_slowko#losuj_obrazek'
    post "/", to: 'podaj_slowko#check'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
