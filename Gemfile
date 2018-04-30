@@ -8,7 +8,7 @@ end
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11', '>= 1.11.1'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 4.1.0'
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

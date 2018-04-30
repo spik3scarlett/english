@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-   get '/nowy_user', to: 'users#new'
+   resources :users
+   get '/nowy-uczen', to: 'users#new'
+   post '/nowy-uczen', to: 'users#create'
 
    root 'podaj_slowko#losuj_obrazek'
    post "/", to: 'podaj_slowko#check'

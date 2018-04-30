@@ -1,2 +1,25 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h2 class="text-center">Zarejestruj się jako nowy uczeń</h2>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 mx-auto">
+    <%= form_for(@user, url: nowy_uczen_path) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :name, "Imię i nazwisko" %>
+      <br/>
+      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.label :email, "Email" %>
+
+      <br/>
+
+      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :password, "Hasło" %>
+      <br/>
+
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.label :password_confirmation, "Potwierdzenie hasła" %>
+      <br/>
+      <%= f.submit "Dodaj mnie", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
