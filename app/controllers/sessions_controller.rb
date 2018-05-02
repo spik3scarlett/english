@@ -10,9 +10,10 @@ class SessionsController < ApplicationController
      # nastepuje remember, czyli odwoluje sie do metody remember z sessions helpera - tworzy
      # token i jego zahaszowana wersje zapisuje w bazie oraz od razu zapisuje cookiesy
      # jesli nie jest zaznaczony, nastepuje forget user
+     redirect_back_or user # metoda z session helper: jesli wymuszono zalogowanie, bedzie cookie z URLem z ktorego zostal przekierowany i tu zostanie redirect_to
+    # jesli nie wymuszano, to przejdzie do user
 
-
-     redirect_to user
+    
    else
     flash.now[:danger] = 'Zły login lub hasło'
     render 'new'

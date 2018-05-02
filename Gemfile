@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'will_paginate',           '3.1.6'
+gem 'will_paginate-bootstrap4', '~> 0.2.2'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11', '>= 1.11.1'

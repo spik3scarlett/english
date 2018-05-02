@@ -1,29 +1,10 @@
 <h2 class="text-center">Zarejestruj się jako nowy uczeń</h2>
+<% provide(:button_text, 'Zarejestruj mnie') %>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 mx-auto">
-    <%= form_for(@user, url: nowy_uczen_path) do |f| %>
-      <%= render 'shared/error_messages' %>
-      <%= f.text_field :name, class: 'form-control' %>
-      <%= f.label :name, "Imię i nazwisko" %>
-      <br/>
-      <br/>
+    <%= render 'form' %>
 
-      <%= f.email_field :email, class: 'form-control' %>
-      <%= f.label :email, "Email" %>
-
-      <br/>
-      <br/>
-
-      <%= f.password_field :password, class: 'form-control' %>
-      <%= f.label :password, "Hasło" %>
-      <br/>
-      <br/>
-
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-      <%= f.label :password_confirmation, "Potwierdzenie hasła" %>
-      <br/>
-      <%= f.submit "Dodaj mnie", class: "btn btn-primary" %>
-    <% end %>
+    
   </div>
 </div>
